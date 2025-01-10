@@ -37,7 +37,15 @@ extensions = [
     "sphinx_design",
     "sphinx_inline_tabs",
 ]
-templates_path = ["_templates"]
+
+# -- Options for Autodoc --------------------------------------------------------------
+
+autodoc_member_order = "bysource"
+autodoc_preserve_defaults = True
+
+# Keep the type hints outside the function signature, moving them to the
+# descriptions of the relevant function/methods.
+autodoc_typehints = "description"
 
 # -- Options for extlinks ----------------------------------------------------
 #
@@ -145,6 +153,6 @@ if FONT_AWESOME_TESTING:
             "name": "GitHub",
             "url": "https://github.com/pradyunsg/furo",
             "html": "",
-            "class": "fa-solid fa-github fa-2x",
+            "class": "fa-brands fa-solid fa-github fa-2x",
         },
     ]
